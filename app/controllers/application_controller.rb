@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
     protect_from_forgery
 
-    before_filter :ref_to_cookie
+    #before_filter :ref_to_cookie
 
     def mobile_device?
         if session[:mobile_param]
@@ -24,4 +24,9 @@ class ApplicationController < ActionController::Base
             end
         end
     end
+
+    def after_sign_in_path_for(resource)
+      "/refer-a-friend"
+    end
+
 end
