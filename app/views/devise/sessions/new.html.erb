@@ -1,17 +1,19 @@
-<h2>Sign in</h2>
+<!--<h2>Sign in</h2>-->
+<div class="header" style="width: 100%;margin:0 auto;background:url('/assets/NoInviteDayParty.jpg') no-repeat top center;background-size:100% 100%;position:absolute;height: 100%">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true,:value=>params[:email] %></div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html=>{:style=> "width:500px;margin-left:460px;margin-top:200px"}) do |f| %>
+  <div><%#= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true,:value=>params[:email],:style=>"opacity:0.8;height:30px",:placeholder=>"Email" %></div>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+  <div><%#= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off",:style=>"opacity:0.8;height:30px",:placeholder=>"Password" %></div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+  <%# if devise_mapping.rememberable? -%>
+    <!--<div><%#= f.check_box :remember_me %> <%#= f.label :remember_me %></div>-->
+  <%# end -%>
 
   <div><%= f.submit "Sign in" %></div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%#= render "devise/shared/links" %>
+</div>

@@ -1,3 +1,16 @@
+
+<%if @status ==false%>
+    <div class="header" style="width: 100%;margin:0 auto;background:url('/assets/NoInviteMessage.png') no-repeat top center;background-size:100% 100%;position:absolute;height: 100%">
+<%else @status ==true%>
+
+    <div class="header" style="width: 100%;margin:0 auto;background:url('/assets/FrontPage.png') no-repeat top center;background-size:100% 100%;position:absolute;height: 100%">
+
+</div>
+<%end%>
+
+
+<%
+=begin %>
 <%if @status ==false%>
     Not Invited
 <%else @status ==true%>
@@ -22,3 +35,6 @@
     <% end %>
 </div>
 <%end%>
+
+<%
+=end %>
