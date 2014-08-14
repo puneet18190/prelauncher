@@ -21,16 +21,29 @@
             <% end %>
         <% end %>
         <%= stylesheet_link_tag "core.css", :media => "all" %>
+        <%= stylesheet_link_tag "bootstrap.css", :media => "all" %>
         <%= csrf_meta_tags %>
 </head>
 <body id="<%= @bodyId %>">
 <div id="user_nav">
-  <% if user_signed_in? %>
-      Signed in as <%= current_user.email %>. Not you?
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-  <% else %>
-      <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-  <% end %>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+              <li><a>Signed in as <%= current_user.email %>. Not you?</a><li>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %><li>
+          <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Sign in", new_user_session_path %></li>
+          <%end%>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 </div>
 <%= yield %>
 
