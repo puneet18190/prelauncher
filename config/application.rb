@@ -62,7 +62,7 @@ module Prelaunchr
     config.assets.version = '1.0'
 
     config.ended = false
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
     config.assets.precompile += %w[active_admin.css.scss active_admin.js]
   end
 end
