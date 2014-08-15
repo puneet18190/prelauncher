@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails prelaucherapp: development" uuid="e6626a5b-8ae6-40b6-b355-f010aba72fed">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails prelaucherapp: test" uuid="5fe1d2da-461b-4056-bd81-510a66d4035c">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails prelaucherapp: production" uuid="af7065e9-59ad-4eec-8df5-4e9f4ba6fe0a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

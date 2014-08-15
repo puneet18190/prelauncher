@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3484707040">
+    <data-source source="LOCAL" name="Rails prelaucherapp: development" uuid="e6626a5b-8ae6-40b6-b355-f010aba72fed">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:prelauncher</jdbc-url>
+      <user-name>puneet</user-name>
+      <user-password>dfdadfdfdfc4dfcfdfcfdfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails prelaucherapp: test" uuid="5fe1d2da-461b-4056-bd81-510a66d4035c">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:prelauncher</jdbc-url>
+      <user-name>puneet</user-name>
+      <user-password>dfdadfdfdfc4dfcfdfcfdfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails prelaucherapp: production" uuid="af7065e9-59ad-4eec-8df5-4e9f4ba6fe0a">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:prelauncher</jdbc-url>
+      <user-name>puneet</user-name>
+      <user-password>dfdadfdfdfc4dfcfdfcfdfde</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
