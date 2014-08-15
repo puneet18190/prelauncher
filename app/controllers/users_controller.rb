@@ -2,6 +2,7 @@ class UsersController < ApplicationController
     #before_filter :skip_first_page, :only => :new
 
     def new
+      session.delete('ref') if session.has_key?('ref')
       @bodyId = 'home'
       @is_mobile = mobile_device?
 
@@ -12,6 +13,7 @@ class UsersController < ApplicationController
           unless @user.nil?
             session[:ref] = params[:ref]
           end
+
           if @user.nil?
             @status = false
           else
@@ -32,11 +34,20 @@ class UsersController < ApplicationController
 
     def create
       @user = User.find_by_email(params[:user][:email]);
-
-      if @user.nil?
-        redirect_to '/users/sign_up?email='+params[:user][:email]
+      if session.has_key?('ref')
+        if @user.nil?
+          redirect_to '/users/sign_up?email='+params[:user][:email]
+        else
+          redirect_to '/users/sign_in?email='+params[:user][:email]
+        end
       else
-        redirect_to '/users/sign_in?email='+params[:user][:email]
+        if @user.nil?
+            @status = false
+            render 'new'
+        else
+          redirect_to '/users/sign_in?email='+params[:user][:email]
+        end
+        # redirect_to '/users/sign_in?email='+params[:user][:email]
       end
     #    # Get user to see if they have already signed up
     #    @user = User.find_by_email(params[:user][:email]);
