@@ -12,8 +12,8 @@
         </div>
         <div class="share-wrap">
             <p class="why brandon">Don't leave your friends behind</p>
-            <p class="title brandon">INVITE FRIENDS &<br>Earn Product</p>
-            <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and earn Harry's goods for<br>each friend who signs up.</p>
+            <p class="title brandon">INVITE FRIENDS &<br>Earn</p>
+            <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and earn for<br>each friend who signs up.</p>
             <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
             <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
             <div class="social-links">
@@ -25,8 +25,8 @@
     </div>
 </div>
 
-<% 
-    referrals_count = @user.referrals.count
+<%
+    referrals_count = @user.friends.count
 
     stops = User::REFERRAL_STEPS
 
@@ -45,7 +45,7 @@
     <div class="page-content">
         <p class="callout brandon">Here's How It Works:</p>
         <ul class="products clearfix">
-            <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
+            <li class="title brandon"><p class="friends" style="margin-top:-15px">Friends Joined</p><p class="rewards"></p></li>
             <% stops.each do |stop| %>
                 <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
                     <div class="circle"><%= stop["count"] %></div>

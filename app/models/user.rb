@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
     belongs_to :referrer, :class_name => "User", :foreign_key => "referrer_id"
     has_many :referrals, :class_name => "User", :foreign_key => "referrer_id"
+    has_many :friends
     
     #attr_accessible :email
 
@@ -31,18 +32,18 @@ class User < ActiveRecord::Base
             "class" => "three",
             "image" => ActionController::Base.helpers.asset_path("refer/truman@2x.png")
         },
-        {
-            'count' => 25,
-            "html" => "Discount Entry to Every<br>Event for One Year",
-            "class" => "four",
-            "image" => ActionController::Base.helpers.asset_path("refer/winston@2x.png")
-        },
-        {
-            'count' => 50,
-            "html" => "Free Entry to 5<br>Events this year",
-            "class" => "five",
-            "image" => ActionController::Base.helpers.asset_path("refer/blade-explain@2x.png")
-        }
+        # {
+        #     'count' => 25,
+        #     "html" => "Discount Entry to Every<br>Event for One Year",
+        #     "class" => "four",
+        #     "image" => ActionController::Base.helpers.asset_path("refer/winston@2x.png")
+        # },
+        # {
+        #     'count' => 50,
+        #     "html" => "Free Entry to 5<br>Events this year",
+        #     "class" => "five",
+        #     "image" => ActionController::Base.helpers.asset_path("refer/blade-explain@2x.png")
+        # }
     ]
 
     private

@@ -26,6 +26,11 @@ class ApplicationController < ActionController::Base
     end
 
     def after_sign_in_path_for(resource)
+      if session.has_key?('ref')
+        @user = User.find_by_referral_code(session[:ref])
+        session.delete("ref")
+        @user.friends.create(:ref_id => current_user.id)
+      end
       "/refer-a-friend"
     end
 

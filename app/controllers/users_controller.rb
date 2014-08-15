@@ -9,6 +9,9 @@ class UsersController < ApplicationController
       if current_user.nil?
         if params.has_key?('ref')
           @user = User.find_by_referral_code(params[:ref]);
+          unless @user.nil?
+            session[:ref] = params[:ref]
+          end
           if @user.nil?
             @status = false
           else
