@@ -24,13 +24,13 @@ class User < ActiveRecord::Base
             'count' => 5,
             "html" => "Early Invitation to<br>events",
             "class" => "two",
-            "image" =>  ActionController::Base.helpers.asset_path("refer/cream-tooltip@2x.png")
+            # "image" =>  ActionController::Base.helpers.asset_path("refer/cream-tooltip@2x.png")
         },
         {
             'count' => 10,
             "html" => "Discount Entry to<br>One Event",
             "class" => "three",
-            "image" => ActionController::Base.helpers.asset_path("refer/truman@2x.png")
+            # "image" => ActionController::Base.helpers.asset_path("refer/truman@2x.png")
         },
         # {
         #     'count' => 25,
